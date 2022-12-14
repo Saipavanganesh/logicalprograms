@@ -4,28 +4,20 @@ import java.util.Scanner;
 
 public class LogicalPrograms {
     public static void main(String[] args) {
-        System.out.println("Prime Number");
-        System.out.println("************");
+        System.out.println("Reverse Number");
+        System.out.println("*************");
         System.out.println(" ");
 
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter a number");
         int num=sc.nextInt();
-        int count=0;
+        int rev=0,rem;
 
-        for(int i=2;i<num;i++){
-            if(num%i==0){
-                count++;
-            }
+        while(num!=0){
+            rem=num%10;
+            rev=(rev*10)+rem;
+            num=num/10;
         }
-        if(num==0 || num==1){
-            System.out.println(num+" is not prime nor composite");
-        }
-        else if(count==0){
-            System.out.println("Prime number");
-        }
-        else{
-            System.out.println("Not a prime number");
-        }
+        System.out.println("Reverse of the number is: "+rev);
     }
 }
